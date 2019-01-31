@@ -1,0 +1,14 @@
+{% extends "ImageDel/First.html" %}
+{% block content %}
+    <div style="width: 800px">
+        <img src="{{ imgurl.img_url.url }}" style="height:48%;width:48%;float: left">
+    </div>
+    <div style="width:56%;height:auto;float: right">
+        <form action="">
+            宽 度 ：{{ imgmessagea.result.width }}<br>
+            高 度 ：{{ imgmessagea.result.height }}<br>
+            左上顶点的水平坐标：{{ imgmessagea.result.left }}<br>
+            左上顶点的垂直坐标:{{ imgmessagea.result.top }}
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+.file {
+
+    width: 95px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #2d8047;
+
+    position: absolute;
+}
+
+.file input {
+
+    width: 75px;
+    height: 25px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    color: #00FF00;
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}

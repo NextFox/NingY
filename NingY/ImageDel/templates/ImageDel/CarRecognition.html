@@ -1,0 +1,17 @@
+{% extends "ImageDel/First.html" %}
+{% block content %}
+    <div style="width: 800px">
+        <img src="{{ imgurl.img_url.url }}" style="height:48%;width:48%;float: left">
+    </div>
+    <div style="width:56%;height:auto;float: right">
+        <form action="">
+            {% for item in imgmessagea.result %}<br>
+
+                置 信 度：{{ item.score }}&nbsp;&nbsp;&nbsp;&nbsp;
+                生产时间：{{ item.year  }}<br>
+                图片描述：{{ item.baike_info.description }}<br>
+                关 键 字：{{ item.name }}<br>
+            {% endfor %}
+        </form>
+    </div>
+{% endblock %}

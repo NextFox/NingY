@@ -1,0 +1,19 @@
+{% extends "ImageDel/First.html" %}
+{% block content %}
+
+<script>
+    function rec(img_id) {
+        var url = "http://localhost:8000/imgdel/onLineGeneralRecognition?img_id="+img_id;
+        window.open(url)
+    }
+</script>
+<div >
+    {% for item in imgs %}
+        <a href="http://localhost:8000/imgdel/uploadImg"><img src="{{ item.img_url.url }}"
+                                                              onclick="rec('{{ item.id }}')"
+                                                              style="width: auto;height: 300px" ></a>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

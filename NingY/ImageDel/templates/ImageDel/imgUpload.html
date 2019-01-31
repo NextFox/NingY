@@ -1,0 +1,17 @@
+{% extends "ImageDel/First.html" %}
+{% block content %}
+
+
+    <div style=";margin-left: 360px;margin-top: 200px">
+
+        <form action="/imgdel/uploadImg" method="post" enctype="multipart/form-data" >
+            {% csrf_token %}
+            图片描述 : <input type="text" name="description" ><br><br>
+            选择图片 : <input type="file" name="img">
+
+            <button type="submit" class="layui-btn layui-btn-sm">图片上传</button>
+        </form>
+    </div>
+
+
+{% endblock %}

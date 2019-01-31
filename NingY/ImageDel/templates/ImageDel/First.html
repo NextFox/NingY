@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>python图片识别</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/layui/css/NingY.css">
+
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">python 图片识别</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="http://localhost:8000/imgdel/toselectImg">高级搜索</a></li>
+            <li class="layui-nav-item"><a href="http://localhost:8000/imgdel/toObjectRecognition">图像主体检测</a></li>
+            <li class="layui-nav-item"><a href="http://localhost:8000/imgdel/toGeneralRecognition">通用物品识别</a></li>
+
+            {% comment %}<li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">邮件管理</a></dd>
+                    <dd><a href="">消息管理</a></dd>
+                    <dd><a href="">授权管理</a></dd>
+                </dl>
+            </li>{% endcomment %}
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    NingY
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">图片处理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="http://localhost:8000/imgdel/uploadImg">图片上传</a></dd>
+                        <dd><a href="http://localhost:8000/imgdel/showImgs">显示全部图片</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">图片识别</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="http://localhost:8000/imgdel/toAnimalRecognition">动物识别</a></dd>
+                        <dd><a href="http://localhost:8000/imgdel/toPlantRecognition">植物识别</a></dd>
+                        <dd><a href="http://localhost:8000/imgdel/toDishRecognition">菜品识别</a></dd>
+                        <dd><a href="http://localhost:8000/imgdel/toCarRecognition">车辆识别</a></dd>
+                        <dd><a href="http://localhost:8000/imgdel/tologoRecognition">logo商标识别</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">待添加</a></li>
+                <li class="layui-nav-item"><a href="">待添加</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body" style="background-color: #dfe1e8">
+        <!-- 内容主体区域 -->
+        <div style="padding: 15px;">
+            .. || .. >><br><br>
+            {% block content %}
+
+            {% endblock %}
+
+        </div>
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+    </div>
+</div>
+<script src="/static/layui/layui.js"></script>
+<script src="/static/layui/lay/modules/jquery.js"></script>
+
+<!--JavaScript代码区域-->
+<script>
+    layui.use('element', function () {
+        var element = layui.element;
+
+
+    });
+</script>
+</body>
+</html>

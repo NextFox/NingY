@@ -1,0 +1,14 @@
+{% extends "ImageDel/First.html" %}
+{% block content %}
+
+    <div  style="margin-left: 360px;margin-top: 200px ">
+        <form action="/imgdel/CarRecognition" method="post" enctype="multipart/form-data" class="file">
+            {% csrf_token %}
+            <span style="color: #e8e8e8;">上传文件</span>
+            <input type="file" name="img" style="width: 200px;border: 1px solid #ddd">
+            <button type="submit" class="layui-btn" style="position: absolute;left: 450px">植物识别</button>
+            <br>
+        </form>
+    </div>
+
+{% endblock %}
